@@ -1,0 +1,83 @@
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  padding: 0 96px;
+  position: fixed;
+  z-index: 900;
+  background-color: chocolate;
+}
+header h1 a {
+  width: 151px;
+  height: 43px;
+}
+header h1 a img {
+  width: 100%;
+}
+header nav .gnb {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: start;
+  justify-content: center;
+  background-color: aqua;
+}
+header nav .gnb li a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+header nav .gnb li .lnb:nth-last-child(1) {
+  display: none;
+}
+header nav .gnb li .lnb {
+  border: 2px solid red;
+  position: absolute;
+  left: 0px;
+  top: 90px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+  background-color: #fff;
+}
+header nav .gnb li .lnb li a {
+  font-size: 0.875rem;
+  color: #aca4a7;
+}
+header nav .gnb li .lnb li a em {
+  color: #121212;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+header .right_meun {
+  width: 151px;
+  padding-left: 39px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: red;
+}
+header .right_meun a:nth-last-child(1) {
+  width: 20px;
+}
+header .right_meun a:nth-last-child(1) img {
+  width: 100%;
+}
+header .right_meun a {
+  width: 26px;
+  display: inline-block;
+}
+header .right_meun a img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
