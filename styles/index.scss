@@ -1,1 +1,70 @@
 @use './common.scss' as*;
+
+main {
+    section {margin-bottom: 150px;}/* 섹션 간격 */
+    h3 {font-size: $font-size20; font-weight: $font-width-semibold; text-align: center;}/* 공용 */
+    #main_bnr {
+        .bnr {
+            .bnr_conteiner {height: 700px;
+                .bnr1 {
+                    background-image: url(../images/bnr.jpg); @include background;
+                }
+                .bnr2 {}
+                .swiper-slide{
+                    padding: 163px 220px 236px;
+                    a {
+                        img {width: 394px; height: 46px; margin-bottom: 33px;}
+                        p {font-weight: $font-size15; margin-bottom: 30px;}
+                        h2 {font-size: $font-size50; font-weight: $font-width-bold; margin-bottom: 30px; line-height: 1.2;}
+                    }
+                }
+            }
+            .swiper-button-prev {border: 3px solid red;}
+            .swiper-button-next {border: 3px solid red;}
+        }
+    }
+    #best_seller {
+        h3 {margin-bottom: 40px;}
+        .btn_g {
+            .main_btn {text-align: center;
+                button:not(:nth-child(4)) {margin-right: 20px;}
+                button {
+                color: $color-darkgray-4b; width: 76px; height: 44px;
+                border: 1px solid $color-darkgray-4b;
+                }
+            }
+        }
+    }/* best_seller 끝 */
+    #new {@include flex-row;
+        .new_g1 {background-image: url(../images/new1.jpg); @include background;}
+        .new_g2 {background-image: url(../images/new2.jpg); @include background;}
+        .new_g3 {background-image: url(../images/new3.jpg); @include background;}
+        .new_g {
+            .new_product {display: block;
+                padding: 204px 515px 0 70px;
+                width: 640px; height: 350px;
+                color: $color-white; font-size: $font-size24; 
+                p {margin-bottom: 10px; font-weight: $font-width-semibold;
+                    em {font-size: $font-size15;}
+                }
+                h5 {white-space: nowrap; margin-bottom: 10px; font-weight: $font-width-semibold;}
+            }
+        }
+    }/* new 끝 */
+    #steady_seller {@include flex-row;
+        a {width: 406px; height: 606px; display: inline-block;
+            img {width: 100%;}
+        }
+        .clean_it_tilte {
+            h3 {}
+            p {}
+        }
+        .steady_product_g {
+            .steady_slide {
+                .steady_conteiner {
+                    @include flex-row;
+                }
+            }
+        }
+    }
+}

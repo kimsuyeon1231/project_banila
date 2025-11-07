@@ -7,6 +7,7 @@ $font-size10:0.625rem;
 $font-size20:1.25rem;
 $font-size13:0.813rem;
 $font-size30:1.875rem;
+$font-size50:3.125rem;
 $font-width-regular:400;
 $font-width-mediun:500;
 $font-width-semibold:600;
@@ -34,40 +35,42 @@ $color-f5:#f5f5f5;
 @mixin background {background-repeat: no-repeat; background-size: cover; background-position: center;}
 
 
-header {
-    @include flex-row; 
-    width: 100%; height: 90px; padding: 0 96px;
-    position: fixed; z-index: 900;
-    background-color: chocolate;
-    h1 {
-        a {width: 151px; height: 43px;
-            img{width: 100%;}
+#wrap {
+    header {
+        @include flex-row; 
+        width: 100%; height: 90px; padding: 0 96px;
+        /* position: fixed;  */z-index: 900;
+        background-color: chocolate;
+        h1 {
+            a {width: 151px; height: 43px;
+                img{width: 100%;}
+            }
         }
-    }
-    nav { 
-        .gnb { @include flex-row; gap: 50px; align-items: start; justify-content: center;
-            background-color: aqua; 
-            li {
-                a {font-size: $font-size15; font-weight: $font-width-mediun;
-                }
-                .lnb:nth-last-child(1) {display: none;}
-                .lnb { border: 2px solid red; position: absolute;left: 0px; top: 90px;
-                    width: 100%; @include flex-col; gap: 30px;
-                    background-color: $color-white;
-                    li {
-                        a {font-size: $font-size14; color: $color-gray-aca4a7;
-                            em {color: $color-black; font-size: $font-size15; font-weight: $font-width-mediun;}
+        nav { 
+            .gnb { @include flex-row; gap: 50px; align-items: start; justify-content: center;
+                background-color: aqua; 
+                li {
+                    .gnb_link {
+                        font-size: $font-size15; font-weight: $font-width-mediun; 
+                        line-height: 50px; display: block; border: 1px solid yellow;
+                    }
+                    .lnb:nth-last-child(1) {display: none;}
+                    .product {width: 100%; @include flex-col; justify-content: center; gap: 30px; background-color: $color-white;}
+                    .lnb { border: 2px solid red; position: absolute;left: 0px; top: 90px; width: 300px;  display: none;
+                        li {
+                            a {font-size: $font-size14; color: $color-gray-aca4a7;
+                                em {color: $color-black; font-size: $font-size15; font-weight: $font-width-mediun;}
+                            }
                         }
                     }
                 }
             }
-    
         }
-    }
-    .right_meun {width: 151px; padding-left: 39px; @include flex-row; gap: 20px; background-color: red;
-        a:nth-last-child(1) {width: 20px; img{width: 100%;}}
-        a {width: 26px; display: inline-block;
-            img {width: 100%;}
+        .right_meun {width: 151px; padding-left: 39px; @include flex-row; gap: 20px; background-color: red;
+            a:nth-last-child(1) {width: 20px; img{width: 100%;}}
+            a {width: 26px; display: inline-block;
+                img {width: 100%;}
+            }
         }
     }
 }
