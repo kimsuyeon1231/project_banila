@@ -1,0 +1,24 @@
+{
+  "name": "project_banila",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimsuyeon1231/project_banila.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kimsuyeon1231/project_banila/issues"
+  },
+  "homepage": "https://github.com/kimsuyeon1231/project_banila#readme",
+  "dependencies": {
+    "sass": "^1.93.3"
+  }
+}

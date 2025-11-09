@@ -25,7 +25,7 @@ $color-f5:#f5f5f5;
 
 
 @mixin flex-row{
-    display: flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+    display: flex; flex-flow: row nowrap; align-items: center;
 }
 @mixin flex-col{
     display: flex; flex-flow: column nowrap; align-items: start; justify-content: start;
@@ -56,7 +56,7 @@ $color-f5:#f5f5f5;
                     }
                     .lnb:nth-last-child(1) {display: none;}
                     .product {width: 100%; @include flex-col; justify-content: center; gap: 30px; background-color: $color-white;}
-                    .lnb { border: 2px solid red; position: absolute;left: 0px; top: 90px; width: 300px;  display: none;
+                    .lnb { border: 2px solid red; position:absolute; left: 0px; top: 90px; width: 300px;  display: none;
                         li {
                             a {font-size: $font-size14; color: $color-gray-aca4a7;
                                 em {color: $color-black; font-size: $font-size15; font-weight: $font-width-mediun;}
@@ -70,6 +70,52 @@ $color-f5:#f5f5f5;
             a:nth-last-child(1) {width: 20px; img{width: 100%;}}
             a {width: 26px; display: inline-block;
                 img {width: 100%;}
+            }
+        }
+    }
+    footer {width: 100%; padding: 50px 0;
+        nav { background-color: $color-f5; padding: 15px 96px; border-top: 5px solid $color-gray-777;
+            .fnb {@include flex-row; 
+                li:first-child {padding-left: 0;}
+                li:last-child {border-right: 0px;}
+                li {
+                    padding:0  30px; border-right:1.5px solid $color-gray-d7;
+                    a {
+                        font-weight: $font-width-mediun; font-size: $font-size13; color: $color-gray-777;}
+                }
+            }
+        }
+        .center{ padding: 70px  96px;
+            @include flex-row; justify-content: space-between; align-items: start;
+            .logo_g {
+                .logo {
+                    a{width: 151px; height: 43px; display: inline-block; margin-bottom:10px;
+                        img{width: 100%;}}
+                    }
+                p{font-size: $font-size13;}
+            }
+            .cs {
+                dt {font-size: $font-size20; font-weight: $font-width-semibold;}
+                dd {font-size: $font-size13; margin-top: 10px;}
+            }
+            .company {font-size: $font-size13; dd{margin-top: 10px;}}
+            .qr_code {padding: 10px 10px; border: 1px solid $color-black;
+                .qr_image {width: 100px; img {width: 100%;}}
+                .mobile {
+                    text-align: center; font-size: $font-size14; font-weight: $font-width-semibold;}
+            }
+        }
+        .sns {
+            @include flex-row; justify-content: center; gap : 15px; 
+            li {font-size: $font-size13; font-weight: $font-width-mediun;}
+            .insta {width: 30px; height: 30px; display: inline-block;
+                background-image: url(../images/insta.png); @include background;
+            }
+            .facebook {width: 30px; height: 30px; display: inline-block;
+                background-image: url(../images/facebook.png); @include background;
+            }
+            .youtube {width: 30px; height: 30px; display: inline-block;
+                background-image: url(../images/youtube.png); @include background;
             }
         }
     }

@@ -3,7 +3,6 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 90px;
   padding: 0 96px;
@@ -22,7 +21,6 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
   gap: 50px;
   align-items: start;
   justify-content: center;
@@ -71,7 +69,6 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
   background-color: red;
 }
@@ -87,6 +84,122 @@
 }
 #wrap header .right_meun a img {
   width: 100%;
+}
+#wrap footer {
+  width: 100%;
+  padding: 50px 0;
+}
+#wrap footer nav {
+  background-color: #f5f5f5;
+  padding: 15px 96px;
+  border-top: 5px solid #777;
+}
+#wrap footer nav .fnb {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#wrap footer nav .fnb li:first-child {
+  padding-left: 0;
+}
+#wrap footer nav .fnb li:last-child {
+  border-right: 0px;
+}
+#wrap footer nav .fnb li {
+  padding: 0 30px;
+  border-right: 1.5px solid #d7d7d7;
+}
+#wrap footer nav .fnb li a {
+  font-weight: 500;
+  font-size: 0.813rem;
+  color: #777;
+}
+#wrap footer .center {
+  padding: 70px 96px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+}
+#wrap footer .center .logo_g .logo a {
+  width: 151px;
+  height: 43px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+#wrap footer .center .logo_g .logo a img {
+  width: 100%;
+}
+#wrap footer .center .logo_g p {
+  font-size: 0.813rem;
+}
+#wrap footer .center .cs dt {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#wrap footer .center .cs dd {
+  font-size: 0.813rem;
+  margin-top: 10px;
+}
+#wrap footer .center .company {
+  font-size: 0.813rem;
+}
+#wrap footer .center .company dd {
+  margin-top: 10px;
+}
+#wrap footer .center .qr_code {
+  padding: 10px 10px;
+  border: 1px solid #121212;
+}
+#wrap footer .center .qr_code .qr_image {
+  width: 100px;
+}
+#wrap footer .center .qr_code .qr_image img {
+  width: 100%;
+}
+#wrap footer .center .qr_code .mobile {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+#wrap footer .sns {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+#wrap footer .sns li {
+  font-size: 0.813rem;
+  font-weight: 500;
+}
+#wrap footer .sns .insta {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url(../images/insta.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#wrap footer .sns .facebook {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url(../images/facebook.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#wrap footer .sns .youtube {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url(../images/youtube.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 main section {
@@ -154,7 +267,6 @@ main #new {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
 }
 main #new .new_g1 {
   background-image: url(../images/new1.jpg);
@@ -177,7 +289,7 @@ main #new .new_g3 {
 main #new .new_g .new_product {
   display: block;
   padding: 204px 515px 0 70px;
-  width: 640px;
+  width: 100%;
   height: 350px;
   color: #fff;
   font-size: 1.5rem;
@@ -201,7 +313,6 @@ main #steady_seller {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
 }
 main #steady_seller a {
   width: 406px;
@@ -211,11 +322,145 @@ main #steady_seller a {
 main #steady_seller a img {
   width: 100%;
 }
+main #steady_seller .clean_it_tilte p {
+  font-size: 0.9375rem;
+}
 main #steady_seller .steady_product_g .steady_slide .steady_conteiner {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+}
+main #steady_seller .steady_product_g .steady_slide .steady_conteiner .product_g a {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+main #steady_seller .steady_product_g .steady_slide .steady_conteiner .product_g a img {
+  width: 100%;
+}
+main #event {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main #event .event_bnr1, main #event .event_bnr2 {
+  width: 100%;
+  height: 250px;
+  padding: 84.5px 132px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main #event .event_bnr1 {
+  background-image: url(../images/event_bnr1.png);
+}
+main #event .event_bnr2 {
+  background-image: url(../images/event_bnr2.png);
+}
+main #event p {
+  font-weight: 500;
+}
+main #event p em {
+  font-weight: 600;
+  display: inline-block;
+  font-size: 2.1875rem;
+  margin-bottom: 20px;
+}
+main #md_pick {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+main #md_pick .md_pick .background_img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  color: #fff;
+  padding-top: 372px;
+}
+main #md_pick .md_pick .background_img h6 {
+  font-weight: 600;
+  font-size: 1.625rem;
+  margin-bottom: 10px;
+}
+main #md_pick .md_pick .background_img p {
+  font-weight: 500;
+  line-height: 1.3;
+}
+main #md_pick .md_pick .product_g {
+  background-color: yellow;
+  position: relative;
+  z-index: 200;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+main #md_pick .md_pick .product_g .pd_img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+main #md_pick .md_pick .product_g .pd_img img {
+  width: 100%; /* 제품이미지 */
+}
+main #md_pick .md_pick .product_g span { /* 찜하기 */
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 300;
+}
+main #md_pick .md_pick .product_g span img {
+  background-image: url(../images/round_heart.png);
+}
+main #md_pick .md_pick .product_g .product_info {
+  background-color: aqua;
+  width: 390px;
+  padding: 13px 0;
+}
+main #md_pick .md_pick .product_g .product_info h2 a {
+  font-size: 0.875rem;
+}
+main #md_pick .md_pick .product_g .product_info h2 {
+  margin-bottom: 10px;
+}
+main #md_pick .md_pick .product_g .product_info h5 a {
+  font-size: 0.9375rem;
+  width: 100%;
+}
+main #md_pick .md_pick .product_g .product_info h5 {
+  margin-bottom: 10px;
+}
+main #md_pick .md_pick .product_g .product_info .product_price {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+}
+main #md_pick .md_pick .product_g .product_info .product_price p {
+  font-weight: 500;
+}
+main #md_pick .md_pick .product_g .product_info .product_price p del {
+  font-size: 0.875rem;
+  color: #777;
+}
+main #md_pick .travel .background_img {
+  background-image: url(../images/travel_main.jpg);
+}
+main #md_pick .mood .background_img {
+  background-image: url(../images/mood_main.jpg);
+}
+main #md_pick .set .background_img {
+  background-image: url(../images/set_main.jpg);
 }
 
 /*# sourceMappingURL=main.css.map */

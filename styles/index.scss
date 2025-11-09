@@ -42,7 +42,7 @@ main {
         .new_g {
             .new_product {display: block;
                 padding: 204px 515px 0 70px;
-                width: 640px; height: 350px;
+                width: 100%; height: 350px;
                 color: $color-white; font-size: $font-size24; 
                 p {margin-bottom: 10px; font-weight: $font-width-semibold;
                     em {font-size: $font-size15;}
@@ -57,14 +57,68 @@ main {
         }
         .clean_it_tilte {
             h3 {}
-            p {}
+            p {font-size: $font-size15} 
         }
         .steady_product_g {
             .steady_slide {
                 .steady_conteiner {
                     @include flex-row;
+                    .product_g {
+                        a {width: 150px; height: 150px; display: inline-block;
+                            img {width: 100%;}
+                        }
+                    }
                 }
             }
         }
+    }
+    #event {@include flex-row; gap: 10px; margin-left: 10px; margin-right: 10px;
+        .event_bnr1,.event_bnr2 {
+            width: 100%; height: 250px; padding: 84.5px 132px; 
+            border-radius: 10px; @include background;
+        }
+        .event_bnr1 {background-image: url(../images/event_bnr1.png);}
+        .event_bnr2 { background-image: url(../images/event_bnr2.png);}
+            p {font-weight: $font-width-mediun;
+                em {
+                    font-weight: $font-width-semibold; display: inline-block;
+                    font-size: 2.1875rem; margin-bottom: 20px;
+                }
+            }
+    }
+    #md_pick {@include flex-row; gap:50px; justify-content: center;
+        .md_pick {
+            .background_img {
+            @include background; display: inline-block; text-align: center;
+            width: 500px; height: 500px; color: $color-white; padding-top: 372px;
+            h6 {font-weight: $font-width-semibold; font-size: $font-size26; margin-bottom:10px;}
+            p {font-weight: $font-width-mediun; line-height: 1.3;}
+            }
+            .product_g {background-color: yellow; position: relative; z-index: 200;
+                    display: flex; gap: 10px; margin-top: 20px;
+                    .pd_img {display:block; 
+                        width: 100px; height: 100px;
+                        img {width: 100%; /* 제품이미지 */}
+                    } 
+                    span {/* 찜하기 */ position: absolute; top: 60px; left: 60px; z-index: 300;
+                        img {background-image: url(../images/round_heart.png);}
+                    }
+                    .product_info {background-color: aqua; width: 390px; padding: 13px 0;
+                        h2 { a {font-size: $font-size14;} margin-bottom: 10px;}
+                        h5 {
+                            a {font-size: $font-size15;width: 100%;}
+                            margin-bottom: 10px;
+                        }
+                        .product_price {@include flex-row; gap: 5px;
+                            p { font-weight: $font-width-mediun;
+                                del {font-size: $font-size14; color: $color-gray-777;}
+                            }
+                        }
+                    }
+                }
+        }
+        .travel {.background_img {background-image: url(../images/travel_main.jpg);}}
+        .mood {.background_img {background-image: url(../images/mood_main.jpg);}}
+        .set {.background_img {background-image: url(../images/set_main.jpg);}}
     }
 }
