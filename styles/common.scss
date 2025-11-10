@@ -37,9 +37,9 @@ $color-f5:#f5f5f5;
 
 #wrap {
     header {
-        @include flex-row; 
+        @include flex-row; justify-content: space-between;
         width: 100%; height: 90px; padding: 0 96px;
-        /* position: fixed;  */z-index: 900;
+        position: fixed; z-index: 900;
         background-color: chocolate;
         h1 {
             a {width: 151px; height: 43px;
@@ -52,11 +52,10 @@ $color-f5:#f5f5f5;
                 li {
                     .gnb_link {
                         font-size: $font-size15; font-weight: $font-width-mediun; 
-                        line-height: 50px; display: block; border: 1px solid yellow;
+                        line-height: 50px; display: block;
                     }
-                    .lnb:nth-last-child(1) {display: none;}
-                    .product {width: 100%; @include flex-col; justify-content: center; gap: 30px; background-color: $color-white;}
-                    .lnb { border: 2px solid red; position:absolute; left: 0px; top: 90px; width: 300px;  display: none;
+                    .product {width: 100%; @include flex-col; justify-content: center; gap: 30px;}
+                    .lnb {position:absolute; left: 0px; top: 90px; width: 300px; z-index: 800; width: 100%; display: inline-block; background-color: coral;
                         li {
                             a {font-size: $font-size14; color: $color-gray-aca4a7;
                                 em {color: $color-black; font-size: $font-size15; font-weight: $font-width-mediun;}
