@@ -5,11 +5,12 @@ main {
     h3 {font-size: $font-size20; font-weight: $font-width-semibold; text-align: center;}/* 공용 */
     #main_bnr {padding-top: 90px; position: relative; z-index: 800;
         .bnr {width: 100%; 
-            .bnr_conteiner {height: 700px; 
-                }
-                .bnr2 {}
+            .bnr_conteiner {height: 700px;
+                .bnr1 {background-image: url(../images/bnr.jpg); @include background;}
+                .bnr2 {background-image: url(../images/bnr.jpg); @include background;}
+                .bnr3 {background-image: url(../images/bnr.jpg); @include background;}
                 .swiper-slide{
-                    a {width: 100%; height: 700px; padding: 163px 220px 236px; position: absolute;
+                    a {width: 100%; height: 700px; padding: 163px 250px 236px; position: absolute;
                         img {width: 394px; height: 46px; margin-bottom: 33px;}
                         p {font-weight: $font-size15; margin-bottom: 30px; width: 484px;}
                         h2 {font-size: $font-size50; font-weight: $font-width-bold; margin-bottom: 30px; line-height: 1.2; width: 484px;}
@@ -23,23 +24,25 @@ main {
             .swiper-button-next {right: 96px;}
         }
     }
-    #best_seller {position: relative;
+    #best_seller {position: relative; width: 1615px; margin: 150px auto; z-index: 200;
         h3,.btn_g {margin-bottom: 40px;
             .main_btn {text-align: center;
+                .active {color: $color-white;background-color: $color-darkgray-4b;}
                 button:not(:nth-child(4)) {margin-right: 15px;}
                 button {
                 color: $color-darkgray-4b; width: 76px; height: 44px;
                 border: 1px solid $color-darkgray-4b;
                 }
             }
-            a {display: inline-block; text-align: end; width: 100%; padding: 0 150px;
+            a {top:18%; right:0;
+                display: inline-block; text-align: end; position: absolute;
                 em {color: $color-gray-777; font-weight: $font-width-mediun;}
                 span {
                     background-image: url(../images/plus.png); width: 13px; height: 13px; @include background; display: inline-block;
                 }
             }
         }/* 버튼그룹 끝 */
-        .best_g {position: relative;  width: 1613px;
+        .best_g {position: relative; width: 1613px;
             .best_product_g {
                 .best_product {
                     &:hover {
@@ -63,12 +66,16 @@ main {
                     p{font-weight: $font-width-mediun;}
                     del{font-size: $font-size14; color: $color-gray-777;}
                 }
-            }
+            }  
+        }
+        .best_control {
             .swiper-button-prev svg,.swiper-button-next svg  {display: none;}
-            .swiper-button-prev::after{
-                content: ''; background-image: url(../images/previous.png); z-index: 500; position: absolute; left: -40px;
-                width: 44px; height: 44px; background-repeat:no-repeat; background-position: center; display: block;}
-            .swiper-button-next {background-image: url(../images/next.png);}    
+            .swiper-button-prev {top: 57%; left: -54px;}
+            .swiper-button-next {top: 57%; right: -54px;}
+            .swiper-button-prev::after {
+                content: ''; width: 44px; height: 44px; background-image: url(../images/previous.png);@include background; }
+            .swiper-button-next::after {
+                content: ''; width: 44px; height: 44px; background-image: url(../images/next.png);@include background; }
         }
     }/* best_seller 끝 */
     #new {@include flex-row; 
@@ -197,6 +204,7 @@ main {
     .control {
         .swiper-button-prev,.swiper-button-next {background-repeat: no-repeat; background-position: center;}
         .swiper-button-prev {left:-22px; background-image: url(../images/previous.png);}    /* svg 없애기해야됨 */
-        .swiper-button-next {right:-22px; background-image: url(../images/next.png);}    
+        .swiper-button-next {right:-22px; background-image: url(../images/next.png);}  
+        .swiper-button-prev svg, .swiper-button-next svg {display:none;}
             }
 }
