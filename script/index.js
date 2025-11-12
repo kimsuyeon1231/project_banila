@@ -1,3 +1,14 @@
+/* 배너 */
+const bnrSeller = new Swiper('#main_bnr .swiper',{
+    loop : true,
+    centeredSlides: false,
+    navigation: {
+        nextEl: '.bnr_control .swiper-button-next',
+        prevEl: '.bnr_control .swiper-button-prev',
+    },
+    autoplay : {delay:3000,},
+    })
+    
 /* 베스트셀러 */
 const bestSeller = new Swiper('#best_seller .swiper',{
     spaceBetween : 15,
@@ -5,10 +16,10 @@ const bestSeller = new Swiper('#best_seller .swiper',{
     loop : true,
     centeredSlides: false,
     navigation: {
-        nextEl: '.best_g .swiper-button-next',
-        prevEl: '.best_g .swiper-button-prev',
+        nextEl: '.best_control .swiper-button-next',
+        prevEl: '.best_control .swiper-button-prev',
     },
-    autoplay : {delay:3000,},
+    /* autoplay : {delay:3000,}, */
     })
     
     /* 스테디셀러 */
@@ -46,3 +57,11 @@ const bestSeller = new Swiper('#celebrity .influencer', {
         autoplay : {delay:3000,},
         })
 });
+
+
+/* 위치계산 */
+const el = document.querySelector('.gnb_product .lnb');
+const rect = el.getBoundingClientRect();
+
+console.log(rect.top, rect.left); // 화면 기준 좌표
+console.log(rect.width, rect.height); // 크기
