@@ -39,8 +39,8 @@ body, html {
   line-height: 90px;
   display: block;
 }
-#wrap header nav .gnb li .gnb_a:hover {
-  color: #aca4a7;
+#wrap header nav .gnb li:hover > .gnb_a {
+  opacity: 0.5;
 }
 #wrap header nav .gnb li .lnb::before {
   content: "";
