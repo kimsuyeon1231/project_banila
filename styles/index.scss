@@ -112,8 +112,8 @@ main {
                 }
                 .product_g { margin-bottom: 22px;}
                 .product_g {@include flex-row; gap: 30px;
+                    &:hover {.steady_product{.heart {display: block;}}}
                     .steady_product {
-                        &:hover {.heart {display: block;}}
                         width: 150px; height: 150px; position: relative; z-index: 200; 
                         img {width: 100%;}
                         .heart {width: 33px; position: absolute; z-index: 300; bottom: 5px; right: 5px; display: none;
@@ -169,7 +169,8 @@ main {
                         width: 100px; height: 100px;
                         img {width: 100%; /* 제품이미지 */}
                     } 
-                    span {/* 찜하기 */ position: absolute; top: 60px; left: 60px; z-index: 300;
+                    &:hover {span {display: block;}}
+                    span {/* 찜하기 */ position: absolute; top: 60px; left: 60px; z-index: 300; display: none;
                         img {width: 100%;}
                     }
                     .product_info {width: 390px; padding: 13px 0;

@@ -59,7 +59,7 @@ body, html {
 #wrap header nav .gnb li .lnb li a {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #aca4a7;
+  color: #777;
 }
 #wrap header nav .gnb li .lnb li a em {
   font-size: 0.9375rem;
@@ -576,7 +576,7 @@ main #steady_seller .steady_product_g .steady_slide .product_g {
   align-items: center;
   gap: 30px;
 }
-main #steady_seller .steady_product_g .steady_slide .product_g .steady_product:hover .heart {
+main #steady_seller .steady_product_g .steady_slide .product_g:hover .steady_product .heart {
   display: block;
 }
 main #steady_seller .steady_product_g .steady_slide .product_g .steady_product {
@@ -731,11 +731,15 @@ main #md_pick .md_pick .product_g .pd_img {
 main #md_pick .md_pick .product_g .pd_img img {
   width: 100%; /* 제품이미지 */
 }
+main #md_pick .md_pick .product_g:hover span {
+  display: block;
+}
 main #md_pick .md_pick .product_g span { /* 찜하기 */
   position: absolute;
   top: 60px;
   left: 60px;
   z-index: 300;
+  display: none;
 }
 main #md_pick .md_pick .product_g span img {
   width: 100%;
