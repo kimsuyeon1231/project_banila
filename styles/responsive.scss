@@ -1,0 +1,41 @@
+//반응형 scss
+@use'./common.scss' as *;
+
+@media screen and (max-width:1024px){
+
+    #wrap {
+        header {padding: 0 30px;
+            nav {
+                .gnb {gap: 30px;
+                    li {
+                        .gnb_a {font-style: $font-size15;}
+                    }
+                }
+            }
+        }
+        main {
+            #main_bnr {
+                .bnr_conteiner {height: 700px;}
+                .swiper-slide{ a {top:28%;}}
+                h2 {
+                    font-size: $font-size40;
+                }
+                .bnr_control {
+                    .swiper-button-prev {left: 30px;}
+                    .swiper-button-next {right: 30px;}
+                }
+            }
+            #best_seller {width: 964px; 
+                .best_g {width: 964px;}
+                .best_product_g {
+                    .best_product {
+                        width: 230px; height: 246px;
+                    }    
+                }
+                .best_control {
+                    .swiper-button-prev ,.swiper-button-next {display: none;}
+            }
+        }
+    }
+    }
+}

@@ -4,13 +4,13 @@ main {
     section {margin-bottom: 150px;}/* 섹션 간격 */
     h3 {font-size: $font-size20; font-weight: $font-width-semibold; text-align: center;}/* 공용 */
     #main_bnr {padding-top: 90px; position: relative; z-index: 800;
-        .bnr {width: 100%; 
-            .bnr_conteiner {height: 700px;
+        .bnr {
+            .bnr_conteiner {width: 100vw; height: 70vh;
                 .bnr1 {background-image: url(../images/bnr.jpg); @include background;}
                 .bnr2 {background-image: url(../images/bnr.jpg); @include background;}
                 .bnr3 {background-image: url(../images/bnr.jpg); @include background;}
                 .swiper-slide{
-                    a {width: 100%; height: 700px; padding: 163px 250px 236px; position: absolute;
+                    a {width: 100%; height: 700px; position: absolute; top:22%; left: 15%;
                         img {width: 394px; height: 46px; margin-bottom: 33px;}
                         p {font-weight: $font-size15; margin-bottom: 30px; width: 484px;}
                         h2 {font-size: $font-size50; font-weight: $font-width-bold; margin-bottom: 30px; line-height: 1.2; width: 484px;}
@@ -22,12 +22,17 @@ main {
             .swiper-button-prev svg , .swiper-button-next svg {color: $color-black; z-index: 900;}
             .swiper-button-prev {left: 96px;}
             .swiper-button-next {right: 96px;}
+            .swiper-scrollbar-horizontal {width: 450px; bottom: 57px; height: 3px; left: 17%;}
+            .swiper-scrollbar-drag {background-color: $color-black;}
+            .swiper-pagination-current {color: $color-black; }
+            .swiper-pagination-current, .swiper-pagination-total {font-weight: $font-width-semibold; font-size:$font-size15;}
+            .swiper-pagination-fraction {bottom: 52px; left: -34.5%; color: $color-gray-aca4a7;}
         }
     }
     #best_seller {position: relative; width: 1615px; margin: 150px auto; z-index: 200;
         h3,.btn_g {margin-bottom: 40px;
             .main_btn {text-align: center;
-                .active {color: $color-white;background-color: $color-darkgray-4b;}
+                button.active {color: $color-white;background-color: $color-darkgray-4b;}
                 button:not(:nth-child(4)) {margin-right: 15px;}
                 button {
                 color: $color-darkgray-4b; width: 76px; height: 44px;
@@ -42,15 +47,25 @@ main {
                 }
             }
         }/* 버튼그룹 끝 */
-        .best_g {position: relative; width: 1613px;
+        .best_g {position: relative; width: 1613px; display: none;
             .best_product_g {
                 .best_product {
                     &:hover {
                         .favorit_icon span {
                           display: block; /* ✅ hover 시 보이게 */
                         }}
-                    width: 392px; height: 420px; display: inline-block; margin-bottom: 15px; position: relative; z-index: 200;
+                    width: 313.6px; height: 336px; display: inline-block; margin-bottom: 15px; position: relative; z-index: 200; overflow: hidden;
                     img {width: 100%;}
+                    .dark-overlay {/* 상품이미지 오버레이 씌우기 (불투명도0) */
+                        position: absolute;
+                        inset: 0; /* top:0, right:0, bottom:0, left:0 */
+                        background: rgba(0,0,0,0);
+                        transition: 0.3s;
+                        pointer-events: none; /* 클릭 막지 않음 */
+                    }
+                    .dark-overlay.active {/* 상품 이미지 어둡게 */
+                        background: rgba(0,0,0,0.5);
+                    }
                     .favorit_icon {
                         .bag {bottom: 58px; right: 10px;}
                         .heart {bottom: 10px; right: 10px;}
@@ -61,17 +76,19 @@ main {
                     }    
                 }
                 h5 {margin-bottom: 15px;}
+                .brand_title {font-size: $font-size14; margin-bottom: 15px; display: inline-block;}
                 .best_p_title{font-size: $font-size15;}
-                .product_price {@include flex-row; gap: 5px;
+                .product_price {@include flex-row; gap: 10px;
                     p{font-weight: $font-width-mediun;}
                     del{font-size: $font-size14; color: $color-gray-777;}
                 }
             }  
         }
+        .best_g.active {display: block;}
         .best_control {
             .swiper-button-prev svg,.swiper-button-next svg  {display: none;}
-            .swiper-button-prev {top: 57%; left: -54px;}
-            .swiper-button-next {top: 57%; right: -54px;}
+            .swiper-button-prev {top: 57%; left:-54px;}
+            .swiper-button-next {top: 57%; right:-54px;}
             .swiper-button-prev::after {
                 content: ''; width: 44px; height: 44px; background-image: url(../images/previous.png);@include background; }
             .swiper-button-next::after {
@@ -79,9 +96,9 @@ main {
         }
     }/* best_seller 끝 */
     #new {@include flex-row; 
-        .new_g1 {background-image: url(../images/new1.jpg); @include background;}
-        .new_g2 {background-image: url(../images/new2.jpg); @include background;}
-        .new_g3 {background-image: url(../images/new3.jpg); @include background;}
+        .new_g1 {a {background-image: url(../images/new1.jpg);}}
+        .new_g2 {a {background-image: url(../images/new2.jpg);}}
+        .new_g3 {a {background-image: url(../images/new3.jpg);}}
         .new_g { width: 100%;
             .new_product {display: block;
                 padding: 204px 0 50px 70px;
@@ -92,6 +109,12 @@ main {
                 }
                 h5 {white-space: nowrap; margin-bottom: 10px; font-weight: $font-width-semibold;}
             }
+        }
+        .new_g {
+            a {
+                background-position: center; background-repeat: no-repeat; background-size: 105%; transition: background-size 0.7s ease;
+            }
+            &:hover {>a {background-size: 115%;}}
         }
     }/* new 끝 */
     #steady_seller {@include flex-row; gap: 58px; justify-content: center;
@@ -112,13 +135,16 @@ main {
                 }
                 .product_g { margin-bottom: 22px;}
                 .product_g {@include flex-row; gap: 30px;
-                    &:hover {.steady_product{.heart {display: block;}}}
+                    
+                    &:hover {
+                        .steady_product{
+                            .heart {display: block;}}}
                     .steady_product {
                         width: 150px; height: 150px; position: relative; z-index: 200; 
                         img {width: 100%;}
                         .heart {width: 33px; position: absolute; z-index: 300; bottom: 5px; right: 5px; display: none;
                             img {width: 100%;}
-                        }    
+                        }
                     }
                     .product_info {width: 330px;
                         .brand_title,h5,.product_price { margin-bottom: 15px;}
@@ -139,9 +165,10 @@ main {
                 }
             }
         }
-        .swiper-scrollbar {width: 100%; height: 2px; left: 0;bottom: 0; background-color: $color-gray-d7;}
+        .swiper-scrollbar {width: 100%; height: 3px; left: 0;bottom: 0; background-color: $color-gray-d7;}
+        .swiper-scrollbar-drag {background-color: $color-black;}
     }
-    #event {@include flex-row; gap: 10px; justify-content: center;
+    #event {@include flex-row; gap: 10px; justify-content: center; padding: 0 96px;
         .event_bnr1,.event_bnr2 {
             height: 250px; padding: 84.5px 132px; 
             border-radius: 10px; @include background; background-size:contain;
@@ -155,10 +182,12 @@ main {
                 }
             }
     }
-    #md_pick {@include flex-row; gap:50px; justify-content: center;
+    #md_pick_group {@include flex-row; gap:50px; justify-content: center;
         .md_pick {
+            &:hover {>a {background-size: 110%}}
             .background_img {
-            @include background; display: inline-block; text-align: center;
+            @include background; background-size: 101%; transition: background-size 0.7s ease;
+            text-align: center; display: inline-block; 
             width: 500px; height: 500px; color: $color-white; padding-top: 372px;
             h6 {font-weight: $font-width-semibold; font-size: $font-size26; margin-bottom:10px;}
             p {font-weight: $font-width-mediun; line-height: 1.3;}
@@ -193,7 +222,7 @@ main {
     }
     #celebrity {width: 1728px; position: relative; margin: 150px auto;
         .influencer {margin-top: 30px;
-            .conteiner {
+            .container {
                 .swiper-slide { 
                     span {width: 343px; height: 400px;
                         img {width: 100%;}
