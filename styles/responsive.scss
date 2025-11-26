@@ -8,12 +8,16 @@
             nav {
                 .gnb {gap: 30px;
                     li {
-                        .gnb_a {font-style: $font-size15;}
+                        .gnb_a {font-size: $font-size15;}
                     }
-                }
+                } 
+            }
+            .right_menu { gap : 15px;
+                a {width: 23px;}
             }
         }
         main {
+            section {margin-bottom: 100px;}/* 섹션 간격 */
             #main_bnr {
                 .bnr_conteiner {height: 700px;}
                 .swiper-slide{ a {top:28%;}}
@@ -23,9 +27,10 @@
                 .bnr_control {
                     .swiper-button-prev {left: 30px;}
                     .swiper-button-next {right: 30px;}
+                    .swiper-scrollbar-horizontal {left: 18.5%; width: 360px;}
                 }
             }
-            #best_seller {width: 964px; 
+            #best_seller {width: 964px;
                 .best_g {width: 964px;}
                 .best_product_g {
                     .best_product {
@@ -34,8 +39,101 @@
                 }
                 .best_control {
                     .swiper-button-prev ,.swiper-button-next {display: none;}
+                    .swiper-pagination {display:inline-block;}
+            }
+            }
+            #new {
+                .new_g1 {a {background-image: url(../images/new_t_1.jpg);}}
+                .new_g2 {a {background-image: url(../images/new_t_2.jpg);}}
+                .new_g3 {a {background-image: url(../images/new_t_3.jpg);}}        
+                .new_g {
+                    .new_product {
+                        font-size: $font-size20; padding: 200px 30px 50px; height:339px;
+                        background-size: cover;
+                    }
+                }
+            }
+            #steady_seller {margin: 0 auto 150px;
+                .swiper {width: 473px;}
+            }
+            #event {padding: 0 30px;
+                .event_bnr1,.event_bnr2 {padding: 91px 50px; width: 100%;
+                background-size: cover; background-position: 74% 0;
+                }
+                p {font-size: $font-size14;
+                    em {font-size: $font-size24;}
+                }
+            }
+            #md_pick_group {gap:9px;
+                .md_pick {
+                    .background_img {padding-top: 218px;
+                        width: 315px; height: 315px;
+                        h6 {font-size: $font-size18;}
+                        p {font-size: $font-size14; }   
+                    }
+                    .product_g {
+                        .pd_img {width: 83px;}
+                        .product_info {
+                            width: 222px; height: 85px; padding: 0; 
+                            display: flex; @include flex-col; justify-content: space-between;
+                            h2 {a {font-size: $font-size12;}}
+                            h5 {a {font-size: $font-size14;}}
+                            .product_price {
+                                p {font-size: $font-size14;}
+                                del {font-size: $font-size12;}
+                            }
+                        }
+                    }
+                }
+            }
+            #celebrity {width: 964px;
+                .swiper-slide {
+                    span {width: 238.5px;}
+                }
+            }
+        }
+        footer { position: relative; padding: 0;
+            nav {
+                padding: 15px 30px;
+                .fnb {gap: 0; justify-content: space-between;}
+            }
+            .center {padding: 62px 30px;
+                display: grid;
+                /* 왼쪽 정보 / 빈공간 / 3 / 4  → 총 4컬럼 */
+                grid-template-columns: auto 1fr auto auto;
+                grid-template-rows: auto auto;
+                column-gap: 32px;   /* 컬럼 간 간격 */
+                align-items: flex-start;
+            }
+                .logo_g {
+                    .logo {a{height: 35px;}}
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                .company {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                .cs {
+                    grid-column: 3;
+                    grid-row: 1;
+                }
+                .qr_code {
+                    grid-column: 4;
+                    grid-row: 1;
+                    padding: 8px;
+                    .qr_img {
+                        width: 70px; height: 70px; margin: 0 auto 10px;
+                        img {width: 100%;}
+                    }
+                    .mobile {font-size: $font-size12;}
+                }
+                .sns {position: absolute; right: 30px; bottom: 50px;
+                }
             }
         }
     }
-    }
+
+@media screen and (max-width: 768px){
+    
 }

@@ -100,7 +100,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="right_meun">
+            <div class="right_menu">
                 <a href="#"><img src="./images/search.png" alt="검색"></a>
                 <a href="#"><img src="./images/nav_bag.png" alt="장바구니"></a>
                 <a href="#"><img src="./images/user.png" alt="마이페이지"></a>
@@ -109,7 +109,7 @@
         <main>
             <section id="main_bnr">
                 <div class="swiper bnr">
-                    <div class="swiper-wrapper bnr_conteiner">
+                    <div class="swiper-wrapper bnr_container">
                         <div class="swiper-slide bnr1"><a href="#">
                             <!-- 백그라운드 이미지 -->
                             <img src="./images/color_list.png" alt=" ">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="swiper best_g active" data-tab="all">
-                    <div class="swiper-wrapper best_conteiner">
+                    <div class="swiper-wrapper best_container">
                         <div class="swiper-slide best_product_g">
                                 <a href="#" class="best_product"><img src="./images/skin1.jpg" alt="상품 바로가기">
                                     <div class="favorit_icon">
@@ -276,7 +276,7 @@
                     </div>
                 </div>    
                 <div class="swiper best_g" data-tab="skin">
-                    <div class="swiper-wrapper best_conteiner">
+                    <div class="swiper-wrapper best_container">
                         <div class="swiper-slide best_product_g">
                                 <a href="#" class="best_product"><img src="./images/skin1.jpg" alt="상품 바로가기">
                                     <div class="favorit_icon">
@@ -392,7 +392,7 @@
                     </div>
                 </div>
                 <div class="swiper best_g" data-tab="cleanging">
-                    <div class="swiper-wrapper best_conteiner">
+                    <div class="swiper-wrapper best_container">
                         <div class="swiper-slide best_product_g">
                                 <a href="#" class="best_product"><img src="./images/clean1.jpg" alt="상품 바로가기">
                                     <div class="favorit_icon">
@@ -508,7 +508,7 @@
                     </div>
                 </div>
                 <div class="swiper best_g" data-tab="makeup">
-                    <div class="swiper-wrapper best_conteiner">
+                    <div class="swiper-wrapper best_container">
                         <div class="swiper-slide best_product_g">
                                 <a href="#" class="best_product"><img src="./images/makeup1.jpg" alt="상품 바로가기">
                                     <div class="favorit_icon">
@@ -626,33 +626,38 @@
                 <div class="best_control">
                     <!--필요 시 사용(선택)-->
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>                
                 </div>
             </section>
             <section id="new">
-                <div class="new_g new_g1">
-                    <a href="#" class="new_product">
-                        <!-- 백그라운드 이미지 -->
-                        <p>NEW</p>
-                        <h5>글로우 베일 립스틱 8colors</h5>
-                        <p><em>더보기</em></p>
-                    </a>
-                </div>
-                <div class="new_g new_g2">
-                    <a href="#" class="new_product">
-                        <!-- 백그라운드 이미지 -->
-                        <p>NEW</p>
-                        <h5>글로우 베일 립스틱 8colors</h5>
-                        <p><em>더보기</em></p>
-                    </a>
-                </div>
-                <div class="new_g new_g3">
-                    <a href="#" class="new_product">
-                        <!-- 백그라운드 이미지 -->
-                        <p>NEW</p>
-                        <h5>글로우 베일 립스틱 8colors</h5>
-                        <p><em>더보기</em></p>
-                    </a>
+                <div class="swiper">
+                    <div class="swiper-wrapper new_slide">
+                        <div class="swiper-slide new_g new_g1">
+                            <a href="#" class="new_product">
+                                <!-- 백그라운드 이미지 -->
+                                <p>NEW</p>
+                                <h5>글로우 베일 립스틱 8colors</h5>
+                                <p><em>더보기</em></p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide new_g new_g2">
+                            <a href="#" class="new_product">
+                                <!-- 백그라운드 이미지 -->
+                                <p>NEW</p>
+                                <h5>글로우 베일 립스틱 8colors</h5>
+                                <p><em>더보기</em></p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide new_g new_g3">
+                            <a href="#" class="new_product">
+                                <!-- 백그라운드 이미지 -->
+                                <p>NEW</p>
+                                <h5>글로우 베일 립스틱 8colors</h5>
+                                <p><em>더보기</em></p>
+                            </a>
+                        </div>        
+                    </div>
                 </div>
             </section>
             <section id="steady_seller">
@@ -665,201 +670,197 @@
                     <div class="swiper">
                         <div class="swiper-wrapper steady_product_g">
                             <div class="swiper-slide steady_slide">
-                                <div class="steady_conteiner">
-                                    <div class="left_conteiner">
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady1.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>50%</p>
-                                                    <p>15,000원</p>
-                                                    <p><del>30,000원</del></p>        
-                                                </div><!--  -->
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady2.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 포어 클래리파잉 클렌징밤 25ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>15%</p>
-                                                    <p>5,100원</p>
-                                                    <p><del>6,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady3.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 포어 클래리파잉 클렌징밤 25ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>20%</p>
-                                                    <p>19,200원</p>
-                                                    <p><del>24,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady1.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
                                     </div>
-                                    <div class="right_conteiner">
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady4.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 카밍 젤 클렌저 200ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>22,000원</p>
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady5.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 브라이트닝 밤 100ml &필링젤 120ml 세트</a></h5>
-                                                <div class="product_price">
-                                                    <p>35%</p>
-                                                    <p>27,300원</p>
-                                                    <p><del>42,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady6.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 수딩 립앤아이 리무버 패드 30매</a></h5>
-                                                <div class="product_price">
-                                                    <p>20%</p>
-                                                    <p>3,840원</p>
-                                                    <p><del>4,800원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                    </div>    
-                                </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady2.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady3.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
                             </div>
                             <div class="swiper-slide steady_slide">
-                                <div class="steady_conteiner">
-                                    <div class="left_conteiner">
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady7.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 카밍 클렌징 밀크 200ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>24,000원</p>
-                                                </div><!--  -->
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady8.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 버블 클렌저 300ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>30%</p>
-                                                    <p>12,600원</p>
-                                                    <p><del>18,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady9.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 라이스 토닝 팩클렌저 180g</a></h5>
-                                                <div class="product_price">
-                                                    <p>30%</p>
-                                                    <p>16,800원</p>
-                                                    <p><del>24,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady4.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
                                     </div>
-                                    <div class="right_conteiner">
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady10.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 피그베리 모이스처 팩 클렌저 180g</a></h5>
-                                                <div class="product_price">
-                                                    <p>20%</p>
-                                                    <p>19,200원</p>
-                                                    <p><del>24,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady11.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 클렌징 밤 버라이어티 트래블 키트</a></h5>
-                                                <div class="product_price">
-                                                    <p>20%</p>
-                                                    <p>11,200원</p>
-                                                    <p><del>14,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                        <div class="product_g">
-                                            <a href="#" class="steady_product"><img src="./images/steady12.jpg" alt="상품 바로가기">
-                                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                                            </a>
-                                            <div class="product_info">
-                                                <a href="#" class="brand_title">바닐라코</a>
-                                                <h5><a href="#">클린 잇 제로 틴트 리무버 20ml</a></h5>
-                                                <div class="product_price">
-                                                    <p>29%</p>
-                                                    <p>5,000원</p>
-                                                    <p><del>7,000원</del></p>        
-                                                </div>
-                                                <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
-                                            </div>
-                                        </div>    
-                                    </div>    
-                                </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady5.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady6.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
                             </div>
+                            <div class="swiper-slide steady_slide">
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady7.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady8.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady9.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="swiper-slide steady_slide">
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady10.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady11.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                                <div class="product_g">
+                                    <a href="#" class="steady_product"><img src="./images/steady12.jpg" alt="상품 바로가기">
+                                        <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="#" class="brand_title">바닐라코</a>
+                                        <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                        <div class="product_price">
+                                            <p>50%</p>
+                                            <p>15,000원</p>
+                                            <p><del>30,000원</del></p>        
+                                        </div>
+                                        <button type="button"><span><img src="./images/shopping_bag.png" alt="장바구니 담기"></span><em>담기</em></button>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--필요 시 사용(선택)-->
-                <div class="swiper-scrollbar"></div>
+                    <!--필요 시 사용(선택)-->
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </section>
             <section id="event">
@@ -1065,17 +1066,23 @@
                     <div class="swiper-button-prev"></div><!-- 스와이퍼 안에 두면 화살표 갇힘, 꼭 바깥에 둘 것 -->
                     <div class="swiper-button-next"></div>    
                 </div>
-        </section>    
+            </section>    
         </main>
         <footer>
             <nav>
                 <ul class="fnb">
                     <li><a href="#">공지사항</a></li>
+                    <li>|</li>
                     <li><a href="#">서비스 이용약관</a></li>
+                    <li>|</li>
                     <li><a href="#">개인정보처리방침</a></li>
+                    <li>|</li>
                     <li><a href="#">이메일 무단 수집거부 </a></li>
+                    <li>|</li>
                     <li><a href="#">제휴문의</a></li>
+                    <li>|</li>
                     <li><a href="#">해외수출문의 (Business inqulry)</a></li>
+                    <li>|</li>
                     <li><a href="#">SNS 저작물 이용 동의서</a></li>
                 </ul>
             </nav>
@@ -1086,16 +1093,9 @@
                     </h1>
                     <p>Copyright F&Co. Co. Ltd All Right Reserved</p>
                 </div>
-                <dl class="cs">
-                    <dt>고객센터 080-225-650</dt>
-                    <dd>이용시간 | AM 09:00 ~ PM : 18:00</dd>
-                    <dd>점심시간 | PM 12:00 ~ PM : 13:00</dd>
-                    <dd>주말, 공휴일 휴무</dd>
-                </dl>
                 <dl class="company">
                     <dt>(주)에프엔코</dt>
-                    <dd>대표자 : 김승범</dd>
-                    <dd>서울특별시 강남구 테헤란토8길 8, 5층(역삼동)</dd>
+                    <dd>대표자 : 김승범  |  서울특별시 강남구 테헤란토8길 8, 5층(역삼동)</dd>
                     <dd>
                         <em>사업자등록번호 : 214-86-49402</em>
                         <span>|</span>
@@ -1103,6 +1103,12 @@
                     </dd> 
                     <dd>통신판매번호 : 2021-서울강남-03253</dd> 
                     <dd>TEL :  080-225-6500 | FAX : 521-2329 : Email | banila@banila.com</dd>
+                </dl>
+                <dl class="cs">
+                    <dt>고객센터 080-225-650</dt>
+                    <dd>이용시간 | AM 09:00 ~ PM : 18:00</dd>
+                    <dd>점심시간 | PM 12:00 ~ PM : 13:00</dd>
+                    <dd>주말, 공휴일 휴무</dd>
                 </dl>
                 <div class="qr_code">
                     <p class="qr_img"><img src="./images/qr_code.png" alt="모바일 앱 다운로드"></p>

@@ -5,7 +5,7 @@ main {
     h3 {font-size: $font-size20; font-weight: $font-width-semibold; text-align: center;}/* 공용 */
     #main_bnr {padding-top: 90px; position: relative; z-index: 800;
         .bnr {
-            .bnr_conteiner {width: 100vw; height: 70vh;
+            .bnr_container {width: 100vw; height: 70vh;
                 .bnr1 {background-image: url(../images/bnr.jpg); @include background;}
                 .bnr2 {background-image: url(../images/bnr.jpg); @include background;}
                 .bnr3 {background-image: url(../images/bnr.jpg); @include background;}
@@ -29,7 +29,8 @@ main {
             .swiper-pagination-fraction {bottom: 52px; left: -34.5%; color: $color-gray-aca4a7;}
         }
     }
-    #best_seller {position: relative; width: 1615px; margin: 150px auto; z-index: 200;
+    #best_seller {
+        position: relative; width: 1615px; margin: 150px auto; z-index: 200;  padding-bottom: 55px;
         h3,.btn_g {margin-bottom: 40px;
             .main_btn {text-align: center;
                 button.active {color: $color-white;background-color: $color-darkgray-4b;}
@@ -93,28 +94,37 @@ main {
                 content: ''; width: 44px; height: 44px; background-image: url(../images/previous.png);@include background; }
             .swiper-button-next::after {
                 content: ''; width: 44px; height: 44px; background-image: url(../images/next.png);@include background; }
+            .swiper-pagination {bottom: 0; display: none;}
+            .swiper-pagination-bullet {width: 10px; height: 10px; margin: 0 5px;}
+            .swiper-pagination-bullet-active {
+                background: $color-black; width: 20px; border-radius: 5px;
+            }
         }
     }/* best_seller 끝 */
-    #new {@include flex-row; 
-        .new_g1 {a {background-image: url(../images/new1.jpg);}}
-        .new_g2 {a {background-image: url(../images/new2.jpg);}}
-        .new_g3 {a {background-image: url(../images/new3.jpg);}}
-        .new_g { width: 100%;
-            .new_product {display: block;
-                padding: 204px 0 50px 70px;
-                height: 350px;
-                color: $color-white; font-size: $font-size24; 
-                p {margin-bottom: 10px; font-weight: $font-width-semibold;
-                    em {font-size: $font-size15;}
+    #new {
+        .swiper {
+            .swiper-wrapper {
+                .new_g1 {a {background-image: url(../images/new1.jpg);}}
+                .new_g2 {a {background-image: url(../images/new2.jpg);}}
+                .new_g3 {a {background-image: url(../images/new3.jpg);}}
+                .new_g { width: 100%;
+                    .new_product {display: block;
+                        padding: 204px 0 50px 70px;
+                        height: 350px;
+                        color: $color-white; font-size: $font-size24; 
+                        p {margin-bottom: 10px; font-weight: $font-width-semibold;
+                            em {font-size: $font-size15;}
+                        }
+                        h5 {white-space: nowrap; margin-bottom: 10px; font-weight: $font-width-semibold;}
+                    }
                 }
-                h5 {white-space: nowrap; margin-bottom: 10px; font-weight: $font-width-semibold;}
+                .new_g {
+                    a {
+                        background-position: center; background-repeat: no-repeat; background-size: 105%; transition: background-size 0.7s ease;
+                    }
+                    &:hover {>a {background-size: 115%;}}
+                }        
             }
-        }
-        .new_g {
-            a {
-                background-position: center; background-repeat: no-repeat; background-size: 105%; transition: background-size 0.7s ease;
-            }
-            &:hover {>a {background-size: 115%;}}
         }
     }/* new 끝 */
     #steady_seller {@include flex-row; gap: 58px; justify-content: center;
@@ -130,12 +140,8 @@ main {
         .swiper { width: 1083px;}
         .steady_product_g {
             .steady_slide {
-                .steady_conteiner {
-                    @include flex-row; gap: 63px;
-                }
                 .product_g { margin-bottom: 22px;}
                 .product_g {@include flex-row; gap: 30px;
-                    
                     &:hover {
                         .steady_product{
                             .heart {display: block;}}}

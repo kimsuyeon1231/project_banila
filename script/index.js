@@ -28,19 +28,25 @@ const bestSeller = new Swiper('#best_seller .swiper',{
         nextEl: '.best_control .swiper-button-next',
         prevEl: '.best_control .swiper-button-prev',
     },
-    breakpoints: {
+    pagination: {
+        el: '#best_seller .swiper-pagination',
+        clickable: true,
+
+    },
+    breakpoints: {/* 반응형 */
         1025: { slidesPerView: 5 },
         769: { slidesPerView: 4 },
     }
     /* autoplay : {delay:3000,}, */
     })
+
     
     
      /* 베스트셀러 버튼 */
     const bestBtns = document.querySelectorAll('.best_btn');
     const bestGroup = document.querySelectorAll('#best_seller .best_g');
 
-bestBtns.forEach(btn => {
+    bestBtns.forEach(btn => {
     btn.addEventListener('click', () => {
 
     const tabId = btn.dataset.tab;  // "all", "skin", "cleanging", "makeup"
@@ -78,11 +84,30 @@ document.querySelectorAll('.best_product').forEach(product => {
     });
 });
 
+/* 뉴 슬라이드 */
+const newSeller = new Swiper('#new .swiper',{
+    slidesPerView : 3,
+    loop : true,
+    centeredSlides: false,
+    pagination: {
+        el: '#new .swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {/* 반응형 */
+        1025: { slidesPerView: 3 },
+        769: { slidesPerView: 3 },
+        320: { slidesPerView: 1 },
+    }
+    /* autoplay : {delay:3000,}, */
+    })
+
+
 
     /* 스테디셀러 */
     document.addEventListener('DOMContentLoaded', () => {
         const steadySwiper = new Swiper('#steady_seller .swiper', {
             // 화면에 1장씩, 좌우 드래그로 넘기기
+            spaceBetween : 63,
             slidesPerView: 1,
             loop: true,                 // 필요 없으면 false
             allowTouchMove: true,       // 터치/마우스 드래그 허용 (기본값 true)
@@ -97,6 +122,9 @@ document.querySelectorAll('.best_product').forEach(product => {
                 dragSize: 'auto',
             },
             // 초기 렌더 시 숨김상태였다면 레이아웃 변화 감지
+            breakpoints: {
+                1025: { slidesPerView: 2 },
+            },
     observer: true,
     observeParents: true,
     });
@@ -111,6 +139,10 @@ const bestSeller = new Swiper('#celebrity .influencer', {
             nextEl: '.influencer .swiper-button-next',
             prevEl: '.influencer .swiper-button-prev',
         },    
+        breakpoints: {
+            1025: { slidesPerView: 5 },
+            769: { slidesPerView: 4 },
+        },
         autoplay : {delay:3000,},
         })
 });

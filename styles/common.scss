@@ -7,6 +7,7 @@ $font-size10:0.625rem;
 $font-size20:1.25rem;
 $font-size13:0.813rem;
 $font-size17:1.063rem;
+$font-size18:1.125rem;
 $font-size30:1.875rem;
 $font-size40:2.5rem;
 $font-size50:3.125rem;
@@ -93,7 +94,7 @@ body,html {scroll-behavior: smooth;}
                 .gnb_community:hover {.lnb {display: flex;}}/* 마우스 올리면 */
             }/* gnb끝 */
         }/* nav끝 */
-        .right_meun {width: 151px; padding-left: 39px; @include flex-row; gap: 20px;
+        .right_menu {width: 151px; padding-left: 39px; @include flex-row; gap: 20px;  justify-content: end;
             a:nth-last-child(1) {width: 20px; img{width: 100%;}}
             a {width: 26px; display: inline-block;
                 img {width: 100%;}
@@ -102,11 +103,9 @@ body,html {scroll-behavior: smooth;}
     }
     footer { padding: 50px 0; margin: 0 auto;
         nav { background-color: $color-f5; padding: 15px 96px; border-top: 5px solid $color-gray-777; width: 100wv;
-            .fnb {@include flex-row; 
-                li:first-child {padding-left: 0;}
-                li:last-child {border-right: 0px;}
+            .fnb {@include flex-row; gap: 30px;
+                li:nth-child(even) { color: $color-gray-d7;}
                 li {
-                    padding:0  30px; border-right:1.5px solid $color-gray-d7;
                     a {
                         font-weight: $font-width-mediun; font-size: $font-size13; color: $color-gray-777;}
                 }
@@ -126,7 +125,7 @@ body,html {scroll-behavior: smooth;}
                 dd {font-size: $font-size13; margin-top: 10px;}
             }
             .company {font-size: $font-size13; dd{margin-top: 10px;}}
-            .qr_code {padding: 10px 10px; border: 1px solid $color-black;
+            .qr_code {padding: 10px; border: 1px solid $color-black;
                 .qr_image {width: 100px; img {width: 100%;}}
                 .mobile {
                     text-align: center; font-size: $font-size14; font-weight: $font-width-semibold;}
