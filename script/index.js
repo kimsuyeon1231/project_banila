@@ -36,6 +36,10 @@ const bestSeller = new Swiper('#best_seller .swiper',{
     breakpoints: {/* 반응형 */
         1025: { slidesPerView: 5 },
         769: { slidesPerView: 4 },
+        320: { 
+            slidesPerView: 3,
+            spaceBetween : 11,
+        },
     }
     /* autoplay : {delay:3000,}, */
     })
@@ -95,8 +99,10 @@ const newSeller = new Swiper('#new .swiper',{
     },
     breakpoints: {/* 반응형 */
         1025: { slidesPerView: 3 },
-        769: { slidesPerView: 3 },
-        320: { slidesPerView: 1 },
+        769: { slidesPerView: 3,
+                spaceBetween : 3,
+        },
+        320: { slidesPerView: 1, spaceBetween: 0},
     }
     /* autoplay : {delay:3000,}, */
     })
@@ -124,10 +130,32 @@ const newSeller = new Swiper('#new .swiper',{
             // 초기 렌더 시 숨김상태였다면 레이아웃 변화 감지
             breakpoints: {
                 1025: { slidesPerView: 2 },
+                769: { slidesPerView: 1, },
+                320: { slidesPerView: 1, 
+                },
             },
     observer: true,
     observeParents: true,
     });
+
+/* 이벤트 슬라이드 */
+const eventSlide = new Swiper('#event .swiper',{
+    slidesPerView : 2,
+    loop : true,
+    centeredSlides: false,
+    pagination: {
+        el: '#event .swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {/* 반응형 */
+        769 : {spaceBetween : 10,
+                slidesPerView : 2,
+        },
+        320: { slidesPerView: 1},
+    }
+    /* autoplay : {delay:3000,}, */
+    })
+
 
 /* 인플루언서 */
 const bestSeller = new Swiper('#celebrity .influencer', {
@@ -138,10 +166,17 @@ const bestSeller = new Swiper('#celebrity .influencer', {
         navigation: {
             nextEl: '.influencer .swiper-button-next',
             prevEl: '.influencer .swiper-button-prev',
-        },    
+        },
         breakpoints: {
             1025: { slidesPerView: 5 },
             769: { slidesPerView: 4 },
+            320: {slidesPerView: 3,
+                spaceBetween : 1,
+                scrollbar: {
+                    el: '#celebrity .swiper-scrollbar',
+                    draggable: true,
+                    dragSize: 'auto',},
+            }
         },
         autoplay : {delay:3000,},
         })

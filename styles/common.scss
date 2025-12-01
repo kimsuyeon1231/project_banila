@@ -12,7 +12,7 @@ $font-size30:1.875rem;
 $font-size40:2.5rem;
 $font-size50:3.125rem;
 $font-width-regular:400;
-$font-width-mediun:500;
+$font-width-medium:500;
 $font-width-semibold:600;
 $font-width-bold:700;
 $letter-spacing-2: -2px;
@@ -53,7 +53,7 @@ body,html {scroll-behavior: smooth;}
             .gnb { @include flex-row; gap: 50px; align-items: start; justify-content: center;
                 li {position: relative;
                     .gnb_a {
-                        font-size: $font-size17; font-weight: $font-width-mediun; 
+                        font-size: $font-size17; font-weight: $font-width-medium; 
                         line-height: 90px; display: block;
                         }
                     &:hover > .gnb_a {opacity: 0.5;}
@@ -65,8 +65,8 @@ body,html {scroll-behavior: smooth;}
                         position: absolute; top:100%; left: 0;
                         padding: 30px 0 100px;
                         li {
-                            a {font-size: $font-size14; font-weight: $font-width-mediun; color: $color-gray-777;
-                                em {font-size: $font-size15; font-weight: $font-width-mediun; color:$color-black;}
+                            a {font-size: $font-size14; font-weight: $font-width-medium; color: $color-gray-777;
+                                em {font-size: $font-size15; font-weight: $font-width-medium; color:$color-black;}
                             }
                         }
                     }
@@ -94,7 +94,7 @@ body,html {scroll-behavior: smooth;}
                 .gnb_community:hover {.lnb {display: flex;}}/* 마우스 올리면 */
             }/* gnb끝 */
         }/* nav끝 */
-        .right_menu {width: 151px; padding-left: 39px; @include flex-row; gap: 20px;  justify-content: end;
+        .right_menu { @include flex-row; gap: 20px;  justify-content: end;
             a:nth-last-child(1) {width: 20px; img{width: 100%;}}
             a {width: 26px; display: inline-block;
                 img {width: 100%;}
@@ -107,7 +107,7 @@ body,html {scroll-behavior: smooth;}
                 li:nth-child(even) { color: $color-gray-d7;}
                 li {
                     a {
-                        font-weight: $font-width-mediun; font-size: $font-size13; color: $color-gray-777;}
+                        font-weight: $font-width-medium; font-size: $font-size13; color: $color-gray-777;}
                 }
             }
         }
@@ -133,7 +133,7 @@ body,html {scroll-behavior: smooth;}
         }
         .sns {
             @include flex-row; justify-content: center; gap : 15px; 
-            li {font-size: $font-size13; font-weight: $font-width-mediun;}
+            li {font-size: $font-size13; font-weight: $font-width-medium;}
             .insta {width: 30px; height: 30px; display: inline-block;
                 background-image: url(../images/insta.png); @include background;
             }

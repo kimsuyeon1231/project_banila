@@ -42,7 +42,7 @@ main {
             }
             a {top:18%; right:0;
                 display: inline-block; text-align: end; position: absolute;
-                em {color: $color-gray-777; font-weight: $font-width-mediun;}
+                em {color: $color-gray-777; font-weight: $font-width-medium;}
                 span {
                     background-image: url(../images/plus.png); width: 13px; height: 13px; @include background; display: inline-block;
                 }
@@ -80,7 +80,7 @@ main {
                 .brand_title {font-size: $font-size14; margin-bottom: 15px; display: inline-block;}
                 .best_p_title{font-size: $font-size15;}
                 .product_price {@include flex-row; gap: 10px;
-                    p{font-weight: $font-width-mediun;}
+                    p{font-weight: $font-width-medium;}
                     del{font-size: $font-size14; color: $color-gray-777;}
                 }
             }  
@@ -157,7 +157,7 @@ main {
                         .brand_title {font-size: $font-size14; display: inline-block;}
                         h5 {a {font-size: $font-size15;}}
                         .product_price {@include flex-row; gap: 5px;
-                            p {font-weight: $font-width-mediun;}
+                            p {font-weight: $font-width-medium;}
                             del {font-size: $font-size14; color: $color-gray-777;}
                         }
                         button {padding: 10px 20px; border: 1px solid $color-gray-d7; width: 330px; border-radius: 4px; 
@@ -174,59 +174,71 @@ main {
         .swiper-scrollbar {width: 100%; height: 3px; left: 0;bottom: 0; background-color: $color-gray-d7;}
         .swiper-scrollbar-drag {background-color: $color-black;}
     }
-    #event {@include flex-row; gap: 10px; justify-content: center; padding: 0 96px;
-        .event_bnr1,.event_bnr2 {
-            height: 250px; padding: 84.5px 132px; 
-            border-radius: 10px; @include background; background-size:contain;
-        }
-        .event_bnr1 {background-image: url(../images/event_bnr1.png); width: 950px;}
-        .event_bnr2 { background-image: url(../images/event_bnr2.png); width: 950px;}
-            p {font-weight: $font-width-mediun; width: 244px;
-                em {
-                    font-weight: $font-width-semibold; display: inline-block;
-                    font-size: 2.1875rem; margin-bottom: 20px;
+    #event {position: relative;border: 2px solid red;
+        .swiper { width: 100%;background-color: aqua;
+            .swiper-slide {
+                width: 100%; height: 250px; @include background;
+                a {
+                    p {
+                        font-weight: $font-width-medium;
+                        em {font-size: $font-size30; font-weight: $font-width-semibold;}
+                    }
+                    span {position: absolute; border: 2px solid red; right:5%; top: 50%; transform: translate(0,-50%);}
                 }
             }
-    }
-    #md_pick_group {@include flex-row; gap:50px; justify-content: center;
-        .md_pick {
-            &:hover {>a {background-size: 110%}}
-            .background_img {
-            @include background; background-size: 101%; transition: background-size 0.7s ease;
-            text-align: center; display: inline-block; 
-            width: 500px; height: 500px; color: $color-white; padding-top: 372px;
-            h6 {font-weight: $font-width-semibold; font-size: $font-size26; margin-bottom:10px;}
-            p {font-weight: $font-width-mediun; line-height: 1.3;}
+            .e_bnr1 {
+                background-image: url(../images/event_bnr1.jpg);
+                span {width: 200px; img {width: 100%;}}
             }
-            .product_g {position: relative; z-index: 200;
-                    display: flex; gap: 10px; margin-top: 20px;
-                    .pd_img {display:block; 
-                        width: 100px; height: 100px;
-                        img {width: 100%; /* 제품이미지 */}
-                    } 
-                    &:hover {span {display: block;}}
-                    span {/* 찜하기 */ position: absolute; top: 60px; left: 60px; z-index: 300; display: none;
-                        img {width: 100%;}
-                    }
-                    .product_info {width: 390px; padding: 13px 0;
-                        h2 { a {font-size: $font-size14;} margin-bottom: 10px;}
-                        h5 {
-                            a {font-size: $font-size15;width: 100%;}
-                            margin-bottom: 10px;
+            .e_bnr2 {
+                background-image: url(../images/event_bnr2.jpg);
+                span {width: 150px; img {width: 100%;}}
+            }
+        }
+    }
+    #md_pick_group {
+        h3 {margin-bottom: 40px;}
+        .md_button {display: none;}
+        .collection {@include flex-row; gap:50px; justify-content: center;
+            .md_pick {
+                &:hover {>a {background-size: 110%}}
+                .background_img {
+                @include background; background-size: 101%; transition: background-size 0.7s ease;
+                text-align: center; display: inline-block; 
+                width: 500px; height: 500px; color: $color-white; padding-top: 372px;
+                h6 {font-weight: $font-width-semibold; font-size: $font-size26; margin-bottom:10px;}
+                p {font-weight: $font-width-medium; line-height: 1.3;}
+                }
+                .product_g {position: relative; z-index: 200;
+                        display: flex; gap: 10px; margin-top: 20px;
+                        .pd_img {display:block; 
+                            width: 100px; height: 100px;
+                            img {width: 100%; /* 제품이미지 */}
+                        } 
+                        &:hover {span {display: block;}}
+                        span {/* 찜하기 */ position: absolute; top: 60px; left: 60px; z-index: 300; display: none;
+                            img {width: 100%;}
                         }
-                        .product_price {@include flex-row; gap: 5px;
-                            p { font-weight: $font-width-mediun;
-                                del {font-size: $font-size14; color: $color-gray-777;}
+                        .product_info {width: 390px; padding: 13px 0;
+                            h2 { a {font-size: $font-size14;} margin-bottom: 10px;}
+                            h5 {
+                                a {font-size: $font-size15;width: 100%;}
+                                margin-bottom: 10px;
+                            }
+                            .product_price {@include flex-row; gap: 5px;
+                                p { font-weight: $font-width-medium;
+                                    del {font-size: $font-size14; color: $color-gray-777;}
+                                }
                             }
                         }
                     }
-                }
+            }
+            .travel {.background_img {background-image: url(../images/travel_main.jpg);}}
+            .mood {.background_img {background-image: url(../images/mood_main.jpg);}}
+            .set {.background_img {background-image: url(../images/set_main.jpg);}}    
         }
-        .travel {.background_img {background-image: url(../images/travel_main.jpg);}}
-        .mood {.background_img {background-image: url(../images/mood_main.jpg);}}
-        .set {.background_img {background-image: url(../images/set_main.jpg);}}
     }
-    #celebrity {width: 1728px; position: relative; margin: 150px auto;
+    #celebrity {width: 100%; position: relative; margin: 150px auto; padding: 96px;
         .influencer {margin-top: 30px;
             .container {
                 .swiper-slide { 
@@ -239,8 +251,8 @@ main {
     }
     .control {
         .swiper-button-prev,.swiper-button-next {background-repeat: no-repeat; background-position: center;}
-        .swiper-button-prev {left:-22px; background-image: url(../images/previous.png);}    /* svg 없애기해야됨 */
-        .swiper-button-next {right:-22px; background-image: url(../images/next.png);}  
+        .swiper-button-prev {left:76px; top: 54%; background-image: url(../images/previous.png);}    /* svg 없애기해야됨 */
+        .swiper-button-next {right:76px; top: 54%; background-image: url(../images/next.png);}  
         .swiper-button-prev svg, .swiper-button-next svg {display:none;}
             }
 }

@@ -659,6 +659,9 @@
                         </div>        
                     </div>
                 </div>
+                <div class="new_control">
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
             <section id="steady_seller">
                 <a href="#" class="steady_main_img"><img src="./images/steady_img.jpg" alt="클린 잇 제로 에디션 바로가기"></a>
@@ -864,164 +867,183 @@
                 </div>
             </section>
             <section id="event">
-                <a href="#" class="event_bnr1">
-                    <!-- 백그라운드 이미지 -->
-                    <p><em>WELCOME 혜택</em></p>
-                    <p>신규회원 10,000원 할인쿠폰 증정</p>
-                </a>
-                <a href="#" class="event_bnr2">
-                    <!-- 백그라운드 이미지 -->
-                    <p><em>MEMBERSHIP BENEFITS</em></p>
-                    <p>구매 적립 최대 16% 혜택</p>
-                </a>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide e_bnr1">
+                            <a href="#" class="event_bnr1">
+                                <p><em>WELCOME 혜택</em></p>
+                                <p>신규회원 10,000원 할인쿠폰 증정</p>
+                                <span><img src="./images/event_img1.png" alt=""></span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide e_bnr2">
+                            <a href="#" class="event_bnr2">
+                                <p><em>MEMBERSHIP BENEFITS</em></p>
+                                <p>구매 적립 최대 16% 혜택</p>
+                                <span><img src="./images/event_img2.png" alt=""></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event_control">
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
             <section id="md_pick_group">
-                <div class="md_pick travel">
-                    <a href="#" class="background_img">
-                        <!-- 백그라운드 이미지 -->
-                        <h6>트래블키트</h6>
-                        <p>파우치에 쏙!<br>
-                        여행 중에도 부담 없이 가볍게</p>
-                    </a>
-                    <div class="travel_product">
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/travel1.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">클린 잇 제로 포어 클래리파잉 클렌징밤 트래블키트</a></h5>
-                                <div class="product_price">
-                                    <p>25%</p>
-                                    <p>10,500원</p> 
-                                    <p><del>14,000원</del></p>        
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/travel2.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">프라임 프라이머 피니쉬 파우더 5g</a></h5>
-                                <div class="product_price">
-                                    <p>30%</p>
-                                    <p>10,500원</p> 
-                                    <p><del>15,000원</del></p>        
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/travel3.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">쉬어 벨벳 베일 틴트 미니 5colors</a></h5>
-                                <div class="product_price">
-                                    <p>20%</p>
-                                    <p>9,600원</p> 
-                                    <p><del>12,000원</del></p>        
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h3>MD 추천</h3>
+                <div class="md_button">
+                    <button class="active"data-tab="1">트레블키트</button>
+                    <button data-tab="2">무드온 컬렉션</button>
+                    <button data-tab="3">세트상품</button>
                 </div>
-                <div class="md_pick mood">
-                    <a href="#" class="background_img">
-                        <!-- 백그라운드 이미지 -->
-                        <h6>무드온 컬렉션</h6>
-                        <p>색조맛집 바닐라<br>
-                            쉽게 완성하는 나만의 분위기</p>
-                    </a>
-                    <div class="mood_product">
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/mood2.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">무드 온 아이 컬러 스틱 16colors</a></h5>
-                                <div class="product_price">
-                                    <p>30%</p>
-                                    <p>9,800원</p>
-                                    <p><del>14,000원</del></p>        
+                <div class="collection">
+                    <div class="md_pick travel active" data-tab="1">
+                        <a href="#" class="background_img">
+                            <!-- 백그라운드 이미지 -->
+                            <h6>트래블키트</h6>
+                            <p>파우치에 쏙!<br>
+                            여행 중에도 부담 없이 가볍게</p>
+                        </a>
+                        <div class="collection_product">
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/travel1.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">클린 잇 제로 포어 클래리파잉 클렌징밤 트래블키트</a></h5>
+                                    <div class="product_price">
+                                        <p>25%</p>
+                                        <p>10,500원</p> 
+                                        <p><del>14,000원</del></p>        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/mood3.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">무드 온 아이 팔레트 9colors</a></h5>
-                                <div class="product_price">
-                                    <p>30%</p>
-                                    <p>11,200원</p>
-                                    <p><del>16,000원</del></p>        
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/travel2.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">프라임 프라이머 피니쉬 파우더 5g</a></h5>
+                                    <div class="product_price">
+                                        <p>30%</p>
+                                        <p>10,500원</p> 
+                                        <p><del>15,000원</del></p>        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/mood1.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">무드 온 라인 앤 블렌드 아이라이너 8colors</a></h5>
-                                <div class="product_price">
-                                    <p>30%</p>
-                                    <p>8,400원</p>
-                                    <p><del>12,000원</del></p>        
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md_pick set">
-                    <a href="#" class="background_img">
-                        <!-- 백그라운드 이미지 -->
-                        <h6>세트 상품</h6>
-                        <p>세트니까 더 저렴하게<br>
-                            특별가로 득템하세요</p>
-                    </a>
-                    <div class="set_product">
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/set1.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
-                                <div class="product_price">
-                                    <p>50%</p>
-                                    <p>15,000원</p>
-                                    <p><del>30,000원</del></p>        
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/set2.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
-                                <div class="product_price">
-                                    <p>50%</p>
-                                    <p>15,000원</p>
-                                    <p><del>30,000원</del></p>        
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product_g">
-                            <a href="#" class="pd_img"><img src="./images/set3.jpg" alt="상품 바로가기"></a>
-                            <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
-                            <div class="product_info">
-                                <h2><a href="#">바닐라코</a></h2>
-                                <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
-                                <div class="product_price">
-                                    <p>50%</p>
-                                    <p>15,000원</p>
-                                    <p><del>30,000원</del></p>        
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/travel3.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">쉬어 벨벳 베일 틴트 미니 5colors</a></h5>
+                                    <div class="product_price">
+                                        <p>20%</p>
+                                        <p>9,600원</p> 
+                                        <p><del>12,000원</del></p>        
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="md_pick mood" data-tab="2">
+                        <a href="#" class="background_img">
+                            <!-- 백그라운드 이미지 -->
+                            <h6>무드온 컬렉션</h6>
+                            <p>색조맛집 바닐라<br>
+                                쉽게 완성하는 나만의 분위기</p>
+                        </a>
+                        <div class="collection_product">
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/mood2.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">무드 온 아이 컬러 스틱 16colors</a></h5>
+                                    <div class="product_price">
+                                        <p>30%</p>
+                                        <p>9,800원</p>
+                                        <p><del>14,000원</del></p>        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/mood3.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">무드 온 아이 팔레트 9colors</a></h5>
+                                    <div class="product_price">
+                                        <p>30%</p>
+                                        <p>11,200원</p>
+                                        <p><del>16,000원</del></p>        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/mood1.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">무드 온 라인 앤 블렌드 아이라이너 8colors</a></h5>
+                                    <div class="product_price">
+                                        <p>30%</p>
+                                        <p>8,400원</p>
+                                        <p><del>12,000원</del></p>        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md_pick set" data-tab="3">
+                        <a href="#" class="background_img">
+                            <!-- 백그라운드 이미지 -->
+                            <h6>세트 상품</h6>
+                            <p>세트니까 더 저렴하게<br>
+                                특별가로 득템하세요</p>
+                        </a>
+                        <div class="collection_product">
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/set1.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                    <div class="product_price">
+                                        <p>50%</p>
+                                        <p>15,000원</p>
+                                        <p><del>30,000원</del></p>        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/set2.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                    <div class="product_price">
+                                        <p>50%</p>
+                                        <p>15,000원</p>
+                                        <p><del>30,000원</del></p>        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_g">
+                                <a href="#" class="pd_img"><img src="./images/set3.jpg" alt="상품 바로가기"></a>
+                                <span class="heart"><img src="./images/round_heart.png" alt="찜하기"></span>
+                                <div class="product_info">
+                                    <h2><a href="#">바닐라코</a></h2>
+                                    <h5><a href="#">클린 잇 제로 오리지널 클렌징밤 25ml</a></h5>
+                                    <div class="product_price">
+                                        <p>50%</p>
+                                        <p>15,000원</p>
+                                        <p><del>30,000원</del></p>        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </section>
             <section id="celebrity">
@@ -1065,6 +1087,7 @@
                 <div class="control">
                     <div class="swiper-button-prev"></div><!-- 스와이퍼 안에 두면 화살표 갇힘, 꼭 바깥에 둘 것 -->
                     <div class="swiper-button-next"></div>    
+                    <div class="swiper-scrollbar"></div>    
                 </div>
             </section>    
         </main>
