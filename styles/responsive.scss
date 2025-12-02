@@ -30,18 +30,24 @@
                     .swiper-scrollbar-horizontal {left: 18.5%; width: 360px;}
                 }
             }
-            #best_seller {width: 964px;
-                .best_g {width: 964px;}
-                .best_product_g {
-                    .best_product {
-                        width: 230px; height: 246px;
-                    }    
+            #best_seller {padding: 0 30px 50px; margin: 100px auto;
+                .main_btn {
+                    a {right: 30px;}
+                }
+                .best_g {max-width:965px; 
+                    .best_container {
+                        .swiper-slide {
+                            .best_product_g {
+                                .best_product {width: 230px; height: 246px;}
+                            }
+                        }
+                    }
                 }
                 .best_control {
-                    .swiper-button-prev ,.swiper-button-next {display: none;}
-                    .swiper-pagination {display:inline-block;}
-            }
-            }
+                    .swiper-button-prev, .swiper-button-next {display: none;}
+                    .swiper-pagination {bottom: 0; display: inline-block;}
+                }
+                }
             #new {
                 .new_g1 {a {background-image: url(../images/new_t_1.jpg);}}
                 .new_g2 {a {background-image: url(../images/new_t_2.jpg);}}
@@ -58,6 +64,9 @@
                 .swiper {width: 473px;}
             }
             #event {
+                a {
+                    em {line-height: 1.2; font-size: $font-size26;}
+                }
             }
             #md_pick_group {
                 .collection {gap: 9px;
@@ -140,17 +149,24 @@
             display: flex; height: 70px; 
             background-color: transparent;  padding: 0 16px;
             h1 {order: 2;}
-            .gnb {
-                order: 1;text-indent: -9999px; width: 28px; height: 28px; margin-right: 48px;
-                background-image: url(../images/menu.png); background-position: center; background-repeat: no-repeat;
+            nav {order: 1;
+                .gnb {
+                    text-indent: -9999px; width: 28px; height: 28px; margin-right: 48px;
+                    background-image: url(../images/menu.png); background-position: center; background-repeat: no-repeat; 
+                }    
             }
             .right_menu {order: 3; padding-left: 0;
                 a:last-child {display: none;}
                 a {width: 28px;}
             }
         }
+        header.header-white {
+            background-color: $color-white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);// 생화이트
+        }
+    
         main {
-            section {margin-bottom: 50px;}/* 섹션 간격 */
+            section {margin-bottom: 70px;}/* 섹션 간격 */
             #main_bnr {
                 padding: 0;
                 .bnr_container { height: 600px;
@@ -168,21 +184,31 @@
                     .swiper-scrollbar-horizontal {bottom: 0; left: 0; width: 100%; height: 4px;}
                 }
             }
-            #best_seller {padding: 14px;
+            #best_seller {padding: 0 14px 50px; margin: 50px auto;
+                h3,.btn_g {margin-bottom:30px;}
                 .main_btn {
-                    font-size: $font-size12; 
-                    button { border-radius: 13px; width:62px; height: 27px;};
-                    button:not(:nth-child(4)) {margin-right: 10px;}
-                }
-                .best_product_g {
-                    .best_product { width: 130px; height: 139px;}
-                    .brand_title {display: none;}
-                    .best_p_title, .product_price { width: 130px;
-                        font-size: $font-size14;
-                        del {display: none;}
+                    button {font-size: $font-size12; width: auto; height: auto; padding: 7px 8px; border-radius: 15px; margin: 0 5px;}
+                    a {right: 10PX;
+                        em {font-size: $font-size12;}
+                        span {width: 12px; height: 12PX;}
                     }
-                    .best_p_title { display: block;
-                        overflow-wrap: break-word;
+                }
+                .best_g {
+                    max-width: 412px;
+                    .best_container {
+                        .swiper-slide {
+                            .best_product_g {
+                                .best_product {width: 130px; height: 139px;}
+                                .brand_title {display: none;}
+                                .best_p_title { font-size: $font-size14; margin-bottom: 10px;                         display: -webkit-box;
+                                    -webkit-box-orient: vertical; 
+                                    -webkit-line-clamp: 2;    /* 줄 수 지정 */
+                                    overflow: hidden;}
+                                .product_price {font-size: $font-size14;
+                                    del {display: none;}
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -206,7 +232,7 @@
                     background-color: $color-white; width: 20px; border-radius: 8px;
                 }
             }
-            #steady_seller {position: relative;
+            #steady_seller {position: relative; margin-bottom: 50px;
                 .steady_main_img {width: 100vw; height: auto; background-size: 100%;}
                 .swiper {width: 100vw; height: 211px;}
                 .clean_it_zero {position: absolute; bottom: 0px;
@@ -237,6 +263,22 @@
                         }    
                     }
                     .swiper-scrollbar {height: 4px;}
+                }
+            }
+            #event {
+                a {
+                    em {font-size: $font-size24;}
+                    span {width: 130px;}
+                }
+                .event_bnr2 {
+                    span {width: 100px;}
+                }
+                .swiper-pagination-bullet {
+                    width: 10px; height: 10px; background-color: transparent;
+                    border:1px solid $color-black; opacity: 1; margin: 5px;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: $color-black; width: 20px; border-radius: 8px;
                 }
             }
             #md_pick_group {

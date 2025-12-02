@@ -29,8 +29,8 @@ main {
             .swiper-pagination-fraction {bottom: 52px; left: -34.5%; color: $color-gray-aca4a7;}
         }
     }
-    #best_seller {
-        position: relative; width: 1615px; margin: 150px auto; z-index: 200;  padding-bottom: 55px;
+    #best_seller { max-width: 1920px; padding:0 96px;
+        position: relative;  margin: 150px auto; z-index: 200;
         h3,.btn_g {margin-bottom: 40px;
             .main_btn {text-align: center;
                 button.active {color: $color-white;background-color: $color-darkgray-4b;}
@@ -39,16 +39,16 @@ main {
                 color: $color-darkgray-4b; width: 76px; height: 44px;
                 border: 1px solid $color-darkgray-4b;
                 }
-            }
-            a {top:18%; right:0;
-                display: inline-block; text-align: end; position: absolute;
-                em {color: $color-gray-777; font-weight: $font-width-medium;}
-                span {
-                    background-image: url(../images/plus.png); width: 13px; height: 13px; @include background; display: inline-block;
+                a {top:18%; right:153px;
+                    display: inline-block; text-align: end; position: absolute;
+                    em {color: $color-gray-777; font-weight: $font-width-medium;}
+                    span {
+                        background-image: url(../images/plus.png); width: 13px; height: 13px; @include background; display: inline-block;
+                    }
                 }
             }
         }/* 버튼그룹 끝 */
-        .best_g {position: relative; width: 1613px; display: none;
+        .best_g {position: relative; max-width: 1613px; display: none;
             .best_product_g {
                 .best_product {
                     &:hover {
@@ -88,8 +88,8 @@ main {
         .best_g.active {display: block;}
         .best_control {
             .swiper-button-prev svg,.swiper-button-next svg  {display: none;}
-            .swiper-button-prev {top: 57%; left:-54px;}
-            .swiper-button-next {top: 57%; right:-54px;}
+            .swiper-button-prev {left: 96px; top: 55%;}
+            .swiper-button-next {right: 96px; top: 55%;}
             .swiper-button-prev::after {
                 content: ''; width: 44px; height: 44px; background-image: url(../images/previous.png);@include background; }
             .swiper-button-next::after {
@@ -174,25 +174,25 @@ main {
         .swiper-scrollbar {width: 100%; height: 3px; left: 0;bottom: 0; background-color: $color-gray-d7;}
         .swiper-scrollbar-drag {background-color: $color-black;}
     }
-    #event {position: relative;border: 2px solid red;
-        .swiper { width: 100%;background-color: aqua;
+    #event {position: relative;
+        .swiper { width: 100%;
             .swiper-slide {
-                width: 100%; height: 250px; @include background;
-                a {
+                width: 100%; height: 250px; @include background;; border-radius: 13px;
+                a {@include flex-row; justify-content: center; align-items: center; height: 100%;
                     p {
                         font-weight: $font-width-medium;
-                        em {font-size: $font-size30; font-weight: $font-width-semibold;}
+                        em {font-size: 2.25rem; font-weight: $font-width-semibold; margin-bottom: 20px; display: inline-block;}
                     }
-                    span {position: absolute; border: 2px solid red; right:5%; top: 50%; transform: translate(0,-50%);}
+                    span {}
                 }
             }
             .e_bnr1 {
                 background-image: url(../images/event_bnr1.jpg);
-                span {width: 200px; img {width: 100%;}}
+                span {width: 200px; img {width: 100%;} display: inline-block;}
             }
             .e_bnr2 {
                 background-image: url(../images/event_bnr2.jpg);
-                span {width: 150px; img {width: 100%;}}
+                span {width: 150px; img {width: 100%;}display: inline-block;}
             }
         }
     }

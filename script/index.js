@@ -1,3 +1,24 @@
+/* 헤더 색상변경 */
+const headerEl = document.querySelector('header');
+const bestSellerSection = document.querySelector('#best_seller');
+
+function updateHeaderBg() {
+  if (!headerEl || !bestSellerSection) return;
+
+  const triggerY = bestSellerSection.offsetTop - headerEl.offsetHeight;
+
+  if (window.scrollY >= triggerY) {
+    headerEl.classList.add('header-white');
+  } else {
+    headerEl.classList.remove('header-white');
+  }
+}
+
+window.addEventListener('scroll', updateHeaderBg);
+// 새로고침 했을 때 이미 스크롤 내려가 있으면 적용되게
+window.addEventListener('load', updateHeaderBg);
+
+
 /* 배너 */
 const bnrSeller = new Swiper('#main_bnr .swiper',{
     loop : true,
@@ -137,6 +158,31 @@ const newSeller = new Swiper('#new .swiper',{
     observer: true,
     observeParents: true,
     });
+
+     /* MD픽 버튼 */
+    const mdBtn = document.querySelectorAll('.md_btn');
+    const mdPick = document.querySelectorAll('#md_pick_group .md_pick');
+
+    mdBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+     const tabId = btn.dataset.tab;  // "1", "2", "3"
+
+     // 1. 버튼 active 초기화
+    mdBtn.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+     // 2. mdPick active 초기화
+    mdPick.forEach(c => {
+    if (c.dataset.tab === tabId) {
+        c.classList.add('active');
+    } else {
+        c.classList.remove('active');
+    }
+    });
+    });
+});
+
 
 /* 이벤트 슬라이드 */
 const eventSlide = new Swiper('#event .swiper',{

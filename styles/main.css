@@ -364,11 +364,11 @@ main #main_bnr .bnr_control .swiper-pagination-fraction {
   color: #aca4a7;
 }
 main #best_seller {
+  max-width: 1920px;
+  padding: 0 96px;
   position: relative;
-  width: 1615px;
   margin: 150px auto;
   z-index: 200;
-  padding-bottom: 55px;
 }
 main #best_seller h3, main #best_seller .btn_g {
   margin-bottom: 40px;
@@ -389,18 +389,18 @@ main #best_seller h3 .main_btn button, main #best_seller .btn_g .main_btn button
   height: 44px;
   border: 1px solid #4b4b4b;
 }
-main #best_seller h3 a, main #best_seller .btn_g a {
+main #best_seller h3 .main_btn a, main #best_seller .btn_g .main_btn a {
   top: 18%;
-  right: 0;
+  right: 153px;
   display: inline-block;
   text-align: end;
   position: absolute;
 }
-main #best_seller h3 a em, main #best_seller .btn_g a em {
+main #best_seller h3 .main_btn a em, main #best_seller .btn_g .main_btn a em {
   color: #777;
   font-weight: 500;
 }
-main #best_seller h3 a span, main #best_seller .btn_g a span {
+main #best_seller h3 .main_btn a span, main #best_seller .btn_g .main_btn a span {
   background-image: url(../images/plus.png);
   width: 13px;
   height: 13px;
@@ -414,7 +414,7 @@ main #best_seller {
 }
 main #best_seller .best_g {
   position: relative;
-  width: 1613px;
+  max-width: 1613px;
   display: none;
 }
 main #best_seller .best_g .best_product_g .best_product:hover .favorit_icon span {
@@ -491,12 +491,12 @@ main #best_seller .best_control .swiper-button-prev svg, main #best_seller .best
   display: none;
 }
 main #best_seller .best_control .swiper-button-prev {
-  top: 57%;
-  left: -54px;
+  left: 96px;
+  top: 55%;
 }
 main #best_seller .best_control .swiper-button-next {
-  top: 57%;
-  right: -54px;
+  right: 96px;
+  top: 55%;
 }
 main #best_seller .best_control .swiper-button-prev::after {
   content: "";
@@ -697,11 +697,9 @@ main #steady_seller .swiper-scrollbar-drag {
 }
 main #event {
   position: relative;
-  border: 2px solid red;
 }
 main #event .swiper {
   width: 100%;
-  background-color: aqua;
 }
 main #event .swiper .swiper-slide {
   width: 100%;
@@ -709,20 +707,24 @@ main #event .swiper .swiper-slide {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 13px;
+}
+main #event .swiper .swiper-slide a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 main #event .swiper .swiper-slide a p {
   font-weight: 500;
 }
 main #event .swiper .swiper-slide a p em {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   font-weight: 600;
-}
-main #event .swiper .swiper-slide a span {
-  position: absolute;
-  border: 2px solid red;
-  right: 5%;
-  top: 50%;
-  transform: translate(0, -50%);
+  margin-bottom: 20px;
+  display: inline-block;
 }
 main #event .swiper .e_bnr1 {
   background-image: url(../images/event_bnr1.jpg);
@@ -733,6 +735,9 @@ main #event .swiper .e_bnr1 span {
 main #event .swiper .e_bnr1 span img {
   width: 100%;
 }
+main #event .swiper .e_bnr1 span {
+  display: inline-block;
+}
 main #event .swiper .e_bnr2 {
   background-image: url(../images/event_bnr2.jpg);
 }
@@ -741,6 +746,9 @@ main #event .swiper .e_bnr2 span {
 }
 main #event .swiper .e_bnr2 span img {
   width: 100%;
+}
+main #event .swiper .e_bnr2 span {
+  display: inline-block;
 }
 main #md_pick_group h3 {
   margin-bottom: 40px;
@@ -922,12 +930,16 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
     width: 360px;
   }
   #wrap main #best_seller {
-    width: 964px;
+    padding: 0 30px 50px;
+    margin: 100px auto;
+  }
+  #wrap main #best_seller .main_btn a {
+    right: 30px;
   }
   #wrap main #best_seller .best_g {
-    width: 964px;
+    max-width: 965px;
   }
-  #wrap main #best_seller .best_product_g .best_product {
+  #wrap main #best_seller .best_g .best_container .swiper-slide .best_product_g .best_product {
     width: 230px;
     height: 246px;
   }
@@ -935,6 +947,7 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
     display: none;
   }
   #wrap main #best_seller .best_control .swiper-pagination {
+    bottom: 0;
     display: inline-block;
   }
   #wrap main #new .new_g1 a {
@@ -959,6 +972,10 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
   }
   #wrap main #steady_seller .swiper {
     width: 473px;
+  }
+  #wrap main #event a em {
+    line-height: 1.2;
+    font-size: 1.625rem;
   }
   #wrap main #md_pick_group .collection {
     gap: 9px;
@@ -1084,8 +1101,10 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
   #wrap header h1 {
     order: 2;
   }
-  #wrap header .gnb {
+  #wrap header nav {
     order: 1;
+  }
+  #wrap header nav .gnb {
     text-indent: -9999px;
     width: 28px;
     height: 28px;
@@ -1104,8 +1123,12 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
   #wrap header .right_menu a {
     width: 28px;
   }
+  #wrap header.header-white {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
   #wrap main section {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
   #wrap main { /* 섹션 간격 */ }
   #wrap main #main_bnr {
@@ -1145,36 +1168,53 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
     height: 4px;
   }
   #wrap main #best_seller {
-    padding: 14px;
+    padding: 0 14px 50px;
+    margin: 50px auto;
   }
-  #wrap main #best_seller .main_btn {
-    font-size: 0.75rem;
+  #wrap main #best_seller h3, #wrap main #best_seller .btn_g {
+    margin-bottom: 30px;
   }
   #wrap main #best_seller .main_btn button {
-    border-radius: 13px;
-    width: 62px;
-    height: 27px;
+    font-size: 0.75rem;
+    width: auto;
+    height: auto;
+    padding: 7px 8px;
+    border-radius: 15px;
+    margin: 0 5px;
   }
-  #wrap main #best_seller .main_btn button:not(:nth-child(4)) {
-    margin-right: 10px;
+  #wrap main #best_seller .main_btn a {
+    right: 10PX;
   }
-  #wrap main #best_seller .best_product_g .best_product {
+  #wrap main #best_seller .main_btn a em {
+    font-size: 0.75rem;
+  }
+  #wrap main #best_seller .main_btn a span {
+    width: 12px;
+    height: 12PX;
+  }
+  #wrap main #best_seller .best_g {
+    max-width: 412px;
+  }
+  #wrap main #best_seller .best_g .best_container .swiper-slide .best_product_g .best_product {
     width: 130px;
     height: 139px;
   }
-  #wrap main #best_seller .best_product_g .brand_title {
+  #wrap main #best_seller .best_g .best_container .swiper-slide .best_product_g .brand_title {
     display: none;
   }
-  #wrap main #best_seller .best_product_g .best_p_title, #wrap main #best_seller .best_product_g .product_price {
-    width: 130px;
+  #wrap main #best_seller .best_g .best_container .swiper-slide .best_product_g .best_p_title {
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 줄 수 지정 */
+    overflow: hidden;
+  }
+  #wrap main #best_seller .best_g .best_container .swiper-slide .best_product_g .product_price {
     font-size: 0.875rem;
   }
-  #wrap main #best_seller .best_product_g .best_p_title del, #wrap main #best_seller .best_product_g .product_price del {
+  #wrap main #best_seller .best_g .best_container .swiper-slide .best_product_g .product_price del {
     display: none;
-  }
-  #wrap main #best_seller .best_product_g .best_p_title {
-    display: block;
-    overflow-wrap: break-word;
   }
   #wrap main #new {
     position: relative;
@@ -1217,6 +1257,7 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
   }
   #wrap main #steady_seller {
     position: relative;
+    margin-bottom: 50px;
   }
   #wrap main #steady_seller .steady_main_img {
     width: 100vw;
@@ -1284,6 +1325,28 @@ main .control .swiper-button-prev svg, main .control .swiper-button-next svg {
   }
   #wrap main #steady_seller .clean_it_zero .swiper-scrollbar {
     height: 4px;
+  }
+  #wrap main #event a em {
+    font-size: 1.5rem;
+  }
+  #wrap main #event a span {
+    width: 130px;
+  }
+  #wrap main #event .event_bnr2 span {
+    width: 100px;
+  }
+  #wrap main #event .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid #121212;
+    opacity: 1;
+    margin: 5px;
+  }
+  #wrap main #event .swiper-pagination-bullet-active {
+    background-color: #121212;
+    width: 20px;
+    border-radius: 8px;
   }
   #wrap main #md_pick_group h3 {
     margin-bottom: 30px;
